@@ -1,0 +1,180 @@
+/* Google Fonts orqali yangi fontni qo'shish */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Umumiy tanlangan stil */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    overflow-x: hidden; /* Horizontall scrollni oldini olish */
+}
+
+/* Animatsiyalar uchun asosiy uslublar */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Header dizayni */
+header {
+    background-image: url('https://daryo.uz/static/2023/10/653a4f23c8b2c.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+    animation: fadeIn 1.5s ease-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: slideUp 1s ease-out;
+}
+
+/* Navigatsiya */
+nav {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    animation: fadeIn 2s ease-out;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+    font-size: 1.1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Zargarlik rangida o'zgarish */
+    border-bottom: 2px solid #FFD700;
+}
+
+/* Sektsiyalar */
+section {
+    padding: 60px 20px;
+    margin: 50px auto;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-out;
+}
+
+/* Figure kartalar */
+.figure-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.figure-card {
+    width: 200px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    overflow: hidden;
+    transform: scale(0.9);
+    opacity: 0;
+    animation: scaleIn 0.5s forwards;
+}
+
+.figure-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.figure-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #f4f4f9;
+}
+
+.figure-card h3 {
+    padding: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.figure-card p {
+    padding: 0 10px 20px;
+    font-size: 0.95em;
+    color: #777;
+}
+
+/* Footer dizayni */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+    opacity: 0.8;
+    animation: fadeIn 2.5s ease-out;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobil qurilmalar uchun moslashtirish */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .figure-list {
+        flex-direction: column;
+    }
+
+    .figure-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
